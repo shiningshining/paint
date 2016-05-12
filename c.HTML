@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>index_three</title> 
+<script type="text/javascript" src="jquery-1.6.4.js"></script>
+<link rel="stylesheet" type="text/css" href="cssstyle.css">
+<script type="text/javascript">
+	function addC(){
+		$(".line1").addClass("line1_2");
+		$(".line3").addClass("line1_2");
+		$(".line2").addClass("line2_2");
+		$(".pen").addClass("pen1");
+	}
+	var i=setInterval("addC()",0);
+	var i2=setTimeout("$('.pen').addClass('pen2')",500);
+	var i3=setTimeout("$('.pen').addClass('pen3')",1000);
+	var mynote=$(".wrap_notebook");
+	console.log($(".wrap_notebook").length);
+	console.log($("body").css("color"));
+	// alert(mynote.length);
+	var ny=0;
+	function startYrotate(){
+		ny=ny+1;
+		// alert(ny);
+		// mynote.css("transform","rotateY(" + ny + "deg)");
+		mynote.css("display","block");
+		// mynote.style.transform="rotateY(" + ny + "deg)"
+		// mynote.style.webkitTransform="rotateY(" + ny + "deg)"
+		// mynote.style.OTransform="rotateY(" + ny + "deg)"
+		// mynote.style.MozTransform="rotateY(" + ny + "deg)"
+		// if (ny==180 || ny>=360)
+		// 	{
+		// 	clearInterval(rotYINT)
+		// 	if (ny>=360){ny=0}
+		// 	}
+	}
+
+	// function rotateYDIV(){
+		// var mynote=$(".wrap_notebook");
+		// clearInterval(rotYINT)
+		// rotYINT=setInterval("startYRotate()",10)
+		// startYrotate();
+	// }
+
+	startYrotate();
+</script>
+</head>
+<body > 
+
+<div class="wrap_notebook">
+	<div class="notebook notebook1">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+	<div class="notebook notebook2"></div>
+
+	<div class="pen1"></div>
+	<div class="pen2"></div>
+	<div class="pen3"></div>
+</div>
+<div class="wrap_clock">
+	<div class="clock">
+		<div class="center"></div>
+		<div class="pointer1"></div>
+		<div class="pointer2"></div>
+	</div>
+	<div class="clockrot">
+		<span class="span_f">F</span><span class="span_x">X</span>
+	</div>
+</div>
+</body>
+</html> 
+
+
